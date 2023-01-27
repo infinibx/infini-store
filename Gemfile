@@ -102,3 +102,4 @@ group :development, :test do
 end
 
 gem "solidus_paypal_commerce_platform", "~> 1.0"
+gem 'solidus_subscriptions', github: 'solidusio/solidus_subscriptions'
