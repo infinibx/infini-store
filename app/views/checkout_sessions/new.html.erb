@@ -2,6 +2,6 @@
 
 <%= render template: 'user_sessions/new' %>
 
-<% if Spree::Config[:allow_guest_checkout] %>
+<% if Spree::Config[:allow_guest_checkout] && current_order.subscription_line_items.empty? %>
   <%= render 'checkout_guest_sessions/form' %>
 <% end %>
