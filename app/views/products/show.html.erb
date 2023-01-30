@@ -11,7 +11,9 @@
       <div class="product-page__info">
         <%= render 'product_header', product: @product %>
         <%= render 'product_promotions', product: @product %>
-        <%= render 'cart_line_items/form', product: @product %>
+        <% if @product.clothing = false %>
+          <%= render 'cart_line_items/form', product: @product %>
+        <% end %>
         <%= render 'product_taxons', product: @product %>
       </div>
     </div>
