@@ -3,9 +3,9 @@
     <%= link_to image_tag('infini-md.png'), root_path %>
   </figure>
 
-  <%# <div class="top-bar__search">
+  <div class="top-bar__search">
     <%= render 'shared/search/search_bar', taxons: taxons, taxon: taxon %>
-  <%# </div> %>
+  </div>
 
   <% if spree_current_user %>
     <%= link_to I18n.t('spree.my_account'), account_path, class: 'auth-link' %>
