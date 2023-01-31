@@ -34,6 +34,8 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show]
 
+  # resources :product_likes, only: :create
+
   resources :cart_line_items, only: :create
 
   get '/locale/set', to: 'locale#set'

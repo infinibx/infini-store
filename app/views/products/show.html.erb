@@ -11,6 +11,8 @@
       <div class="product-page__info">
         <%= render 'product_header', product: @product %>
         <%= render 'product_promotions', product: @product %>
+        <p>Es gefällt <%= @product.likes_count %> mamas</p>
+        <%# <%= link_to product_likes, data: { 'turbo-method': :post } %>
         <% if @product.clothing = false %>
           <%= render 'cart_line_items/form', product: @product %>
         <% end %>
