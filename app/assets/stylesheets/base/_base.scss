@@ -1,3 +1,17 @@
+:root {
+  --brand-yellow: #E79302;
+  --brand-pink: #EB6660;
+  --brand-gray: #EDE2DA;
+  --brand-light-yellow: #FEFDCA;
+  --brand-baby-pink: #FFDEED;
+  --brand-light-purple: #C28695;
+  --brand-baby-white: #FFFFFD;
+  --brand-black: #172226;
+  --header-font: 'League Spartan', serif;
+  --subtitle-font: 'Roboto', sans-serif;
+  --body-font: 'Raleway', sans-serif;
+}
+
 html {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -10,8 +24,8 @@ html {
 }
 
 body {
-  color: $color-copy;
-  font-family: $font-family-base;
+  color: var(--brand-black);
+  font-family: var(--body-font);
   font-size: $font-size-base;
   font-weight: $font-weight-normal;
   line-height: $line-height-base;
@@ -43,4 +57,12 @@ legend {
 code,
 pre {
   font-family: $font-family-monospace;
+}
+
+.container {
+  padding: 80px;
+}
+
+.d-flex {
+  display: flex;
 }
