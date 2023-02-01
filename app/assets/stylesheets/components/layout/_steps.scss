@@ -7,3 +7,13 @@
 .step {
   width: 250px;
 }
+
+.step-icon {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.step-icon img {
+  width: 150px;
+}
