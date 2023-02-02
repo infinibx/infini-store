@@ -10,7 +10,7 @@
 
 <ul class="<%= class_names %>">
   <% products.each do |product| %>
-    <% if product.clothing = true %>
+    <% if product.clothing %>
       <%= render 'products/product-card', product: product %>
     <% end %>
   <% end %>
