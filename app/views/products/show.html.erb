@@ -12,7 +12,7 @@
         <%= render 'product_header', product: @product %>
         <%= render 'product_promotions', product: @product %>
         <div data-add-product-like-target="likes">
-          <p>Es gefällt <%= @product.likes_count %> mamas</p>
+          <%# <p>Es gefällt <%= @product.likes_count %> mamas</p> %>
         </div>
         <%# <%= link_to product_like, data: { 'turbo-method': :post } %>
         <% if @product.clothing = false %>
