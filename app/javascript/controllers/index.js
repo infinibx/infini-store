@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import AddProductLikeController from "./add_product_like_controller"
+application.register("add-product-like", AddProductLikeController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
