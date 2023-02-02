@@ -72,6 +72,9 @@ Spree::Api::Config.configure do |config|
   config.requires_authentication = true
 end
 
+# expose likes count API to clients
+Spree::Api::Config.product_attributes << :likes_count
+
 
 # Rules for avoiding to store the current path into session for redirects
 # When at least one rule is matched, the request path will not be stored
