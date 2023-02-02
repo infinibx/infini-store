@@ -1,5 +1,5 @@
-.button-primary {
-  background: var(--brand-pink);
+.button-secondary {
+  background: var(--brand-black);
   border: 0;
   border-radius: 5px;
   color: var(--brand-baby-white);
@@ -10,8 +10,8 @@
 
   &--bordered {
     background: none;
-    border: solid 1px var(--brand-pink);
-    color: var(--brand-pink);
+    border: solid 1px var(--brand-black);
+    color: var(--brand-black);
   }
 
   &--full-width {
