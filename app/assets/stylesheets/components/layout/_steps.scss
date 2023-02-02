@@ -1,5 +1,17 @@
-.steps {
+.steps-bg {
+  // background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.2)), url('https://i.ibb.co/Ykx93bH/makesumo-do-Kat-AORo-Is-unsplash.jpg');
   background-color: var(--brand-baby-pink);
+  width: 40%;
+  height: 450px;
+  z-index: -1;
+  position: relative;
+  top: 450px;
+  margin-top: -450px;
+  // right: 50%;
+  border-radius: 0 0 500px 0;
+}
+
+.steps {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
