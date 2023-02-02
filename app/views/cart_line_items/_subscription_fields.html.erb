@@ -1,16 +1,17 @@
 <%# <%= content_tag :h3, t('.subscription_fields') %>
 <%= fields_for :'subscription_line_item', SolidusSubscriptions::LineItem.new do |ff| %>
   <div>
-    <%= ff.label :quantity, t('.quantity') %>
+    <%# <%= ff.label :quantity, t('.quantity') %>
     <%= ff.number_field :quantity %>
-    <%= ff.label :quantity, t('.quantity_suffix') %>
+    <%# <%= ff.label :quantity, t('.quantity_suffix') %>
+    <%# <%= ff.label :interval_length, t('.interval_length') %>
   </div>
 
   <div>
-    <%= ff.label :interval_length, t('.interval_length') %>
-    <%= ff.number_field :interval_length %>
-
-    <%= ff.collection_radio_buttons :interval_units, SolidusSubscriptions::LineItem.interval_units.to_a, :first, :first %>
+    <%# <% raise %>
+    <% ff.hidden_field :interval_length, value: 1 %>
+    <% ff.hidden_field :interval_units, value: SolidusSubscriptions::LineItem.interval_units.to_a[2][1] %>
+    <%# <%= ff.collection_radio_buttons :interval_units, SolidusSubscriptions::LineItem.interval_units.to_a, :first, :first %>
   </div>
 
   <%= ff.hidden_field :subscribable_id %>
