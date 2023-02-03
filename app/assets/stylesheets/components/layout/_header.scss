@@ -1,12 +1,13 @@
 .header {
-  border-bottom: 1px solid $color-border-light;
+  // border-bottom: 1px solid $color-border-light;
+  background-color: var(--brand-baby-white);
 
-  &__primary-navigation {
-    border-top: 1px solid $color-border-light;
-  }
+  // &__primary-navigation {
+  // }
 
   &__secondary-navigation {
     margin: 0 auto;
-    max-width: 114rem;
+    min-height: 100px;
+    z-index: 99;
   }
 }

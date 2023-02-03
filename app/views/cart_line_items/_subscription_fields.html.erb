@@ -1,7 +1,9 @@
 <%# <%= content_tag :h3, t('.subscription_fields') %>
 <%= fields_for :'subscription_line_item', SolidusSubscriptions::LineItem.new do |ff| %>
   <div>
+    <p>Receive 2 pieces of clothes each month</p>
     <%= ff.hidden_field :quantity, value: 1 %>
+    <p>Selected by our stylist according to your wishes</p>
     <%= ff.hidden_field :interval_length, value: 1 %>
     <%= ff.hidden_field :interval_units, value: SolidusSubscriptions::LineItem.interval_units.to_a[2][2] %>
     <%= ff.hidden_field :subscribable_id %>
