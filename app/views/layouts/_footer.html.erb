@@ -1,6 +1,29 @@
 <footer class="footer">
-  <p>
-  </p>
+  <div class="footer-logo">
+    <%= image_tag('infini-logo-black.png')%>
+  </div>
+    <ul>
+      <li>Why rent?</li>
+      <li>Our brands</li>
+      <li>Sustainability</li>
+      <li>FAQ</li>
+    </ul>
+  <div>
+    <ul>
+      <li>Our boxes</li>
+      <li>New arrivals</li>
+      <li>How it works</li>
+      <li>How we curate our boxes</li>
+    </ul>
+  </div>
+  <div>
+    <ul>
+      <li>Impressum</li>
+      <li>Community</li>
+      <li>Reviews</li>
+      <li>Legal</li>
+    </ul>
+  </div>
 
   <%
     available_locales = current_store.available_locales.map do |locale|

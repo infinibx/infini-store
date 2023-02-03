@@ -1,12 +1,29 @@
 .footer {
   background: var(--brand-gray);
   font-size: $font-size-small;
-  padding: 12rem 2rem;
-  text-align: center;
+  padding: 12rem 3rem;
+  display: flex;
+  justify-content: space-evenly;
 
   a {
     &:hover {
       color: lighten($color-copy, 30%);
     }
   }
+}
+
+.footer li {
+  list-style: none;
+  color: var(--brand-black);
+  font-family: var(--subtitle-font);
+  padding: 4px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.footer img {
+  margin: 0 auto;
+  width: 100px;
+  opacity: 0.9;
 }
