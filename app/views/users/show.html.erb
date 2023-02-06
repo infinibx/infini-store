@@ -9,6 +9,7 @@
     <p>Due date: <%= @user.due_date.day %>-<%= @user.due_date.month %>-<%= @user.due_date.year %></p>
     <p>Height: <%= @user.height %>cm</p>
     <p>Color Palette: <%= @colors %></p>
+    <p>Style: <%= @fav_style %></p>
   </div>
 
   <%= form_with(url: logout_path, method: Devise.sign_out_via, local: true) do %>
