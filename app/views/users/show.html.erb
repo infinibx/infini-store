@@ -6,7 +6,10 @@
 
   <div>
     <h2>About you</h2>
-    <p>Due date: <%= @user.due_date.day %>-<%= @user.due_date.month %>-<%= @user.due_date.year %></p>
+    <p>Due date:
+    <% if @user.due_date %>
+      <%= @user.due_date.day %>-<%= @user.due_date.month %>-<%= @user.due_date.year %></p>
+    <% end %>
     <p>Height: <%= @user.height %>cm</p>
     <p>Color Palette: <%= @colors %></p>
     <p>Style: <%= @fav_style %></p>
