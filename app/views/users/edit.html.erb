@@ -26,6 +26,13 @@
     </div>
 
     <div class="auth-form__input-wrapper">
+      <div class="text-input">
+        <%= f.label :due_date, "Due date:" %>
+        <%= f.date_field :due_date %>
+      </div>
+    </div>
+
+    <div class="auth-form__input-wrapper">
       <%= f.button t("spree.update"), name: :commit, class: 'button-primary button-primary--full-width' %>
     </div>
   <% end %>
