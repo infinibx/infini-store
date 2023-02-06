@@ -6,9 +6,20 @@ class UsersController < StoreController
 
   include Taxonomies
 
+  PALETTE = {
+    1 => 'Red, Blue, Yellow',
+    2 => 'Mustard, Magenta',
+    3 => 'Red, Pink, Purple',
+    4 => 'Pastels: Pink, Blue, Lavender',
+    5 => 'Brown, Green, Yellow, Blue, Sand',
+    6 => 'Black, Gray, Navy, White',
+    7 => 'Beige, Brown, Blue'
+  }
+
   def show
     load_object
     @orders = @user.orders.complete.order('completed_at desc')
+    @colors = PALETTE[@user.color_palette]
   end
 
   def create
@@ -52,7 +63,7 @@ class UsersController < StoreController
   private
 
   def user_params
-    params.require(:user).permit(Spree::PermittedAttributes.user_attributes | [:email, :due_date])
+    params.require(:user).permit(Spree::PermittedAttributes.user_attributes | %i[email due_date color_palette height])
   end
 
   def load_object

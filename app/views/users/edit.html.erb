@@ -33,6 +33,20 @@
     </div>
 
     <div class="auth-form__input-wrapper">
+      <div class="text-input">
+        <%= f.label :color_palette, "Color Palette:" %>
+        <%= f.select :color_palette, [['Red, Blue, Yellow', 1], ['Mustard,Magenta', 2], ['Red, Pink, Purple', 3], ['Pastel: Pink, Blue, Lavender', 4], ['Brown, Green, Yellow, Blue, Sand', 5], ['Black, Gray, Navy, White', 6], ['Beige, Brown, Blue', 7]] %>
+      </div>
+    </div>
+
+    <div class="auth-form__input-wrapper">
+      <div class="text-input">
+        <%= f.label :height, "Height(cm):" %>
+        <%= f.select :height, (100...200) %>
+      </div>
+    </div>
+
+    <div class="auth-form__input-wrapper">
       <%= f.button t("spree.update"), name: :commit, class: 'button-primary button-primary--full-width' %>
     </div>
   <% end %>

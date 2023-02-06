@@ -1,8 +1,9 @@
-.button-primary {
-  background: var(--brand-pink);
+.button-outline {
+  background: none;
   border: solid 1px var(--brand-pink);
+  color: var(--brand-pink);
   border-radius: 5px;
-  color: var(--brand-baby-white);
+  color: var(--brand-pink);
   font-size: $buttons-font-size-default;
   font-weight: $buttons-font-weight;
   padding: 1rem 2rem;

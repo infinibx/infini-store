@@ -2,12 +2,18 @@
   <div class="account-summary__profile">
     <h2><%= I18n.t('spree.email') %></h2>
     <p><%= @user.email %></p>
-    <p><%= @user.due_date %></p>
+  </div>
+
+  <div>
+    <h2>About you</h2>
+    <p>Due date: <%= @user.due_date.day %>-<%= @user.due_date.month %>-<%= @user.due_date.year %></p>
+    <p>Height: <%= @user.height %>cm</p>
+    <p>Color Palette: <%= @colors %></p>
   </div>
 
   <%= form_with(url: logout_path, method: Devise.sign_out_via, local: true) do %>
     <%= button_tag(t("spree.logout"), class: 'button-primary') %>
-    <%= link_to I18n.t('spree.edit'), edit_account_path, class: 'button-secondary' %>
+    <%= link_to I18n.t('spree.edit'), edit_account_path, class: 'button-outline' %>
   <% end %>
 
   <div class="account-summary__orders">

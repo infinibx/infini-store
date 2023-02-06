@@ -1,6 +1,6 @@
 .button-secondary {
   background: var(--brand-black);
-  border: 0;
+  border: solid 1px var(--brand-black);
   border-radius: 5px;
   color: var(--brand-baby-white);
   font-size: $buttons-font-size-default;
