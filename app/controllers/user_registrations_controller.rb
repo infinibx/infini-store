@@ -32,6 +32,8 @@ class UserRegistrationsController < Devise::RegistrationsController
   private
 
   def spree_user_params
-    params.require(:spree_user).permit(Spree::PermittedAttributes.user_attributes | [:email])
+    params.require(:spree_user)
+    .permit(Spree::PermittedAttributes
+    .user_attributes | %i[email due_date color_palette height style])
   end
 end
