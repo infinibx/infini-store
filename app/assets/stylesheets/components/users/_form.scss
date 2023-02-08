@@ -1,5 +1,16 @@
 .email-password {
   height: 100vh;
+  background-color: var(--brand-pink);
+  color: var(--brand-baby-white);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  > h1 {
+    text-align: center;
+    margin-bottom: 70px;
+  }
 }
 
 .email-password .auth-form__input-wrapper{
