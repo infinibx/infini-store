@@ -19,6 +19,16 @@ class UserRegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def user_choose_clothes
+    build_resource({})
+    # respond_with self.resource
+  end
+
+  def stylist_choose_clothes
+    build_resource(spree_user_params)
+    respond_with self.resource
+  end
+
   protected
 
   def translation_scope

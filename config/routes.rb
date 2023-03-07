@@ -15,9 +15,18 @@ Rails.application.routes.draw do
     path_names: { sign_out: 'logout' }
   })
 
+  # Namespace for user registrations
+  # namespace :users do
+  #   # Route for when the user wants to choose their own clothes
+  #   get 'custom_registration', to: 'user_registrations#user_choose_clothes', as: 'choose_own_clothes_registration'
+  #   # Route for when the user wants stylist to choose clothes
+  #   get 'curated_registration', to: 'user_registrations#stylist_choose_clothes', as: 'stylist_choose_clothes_registration'
+  # end
+
   resources :users, only: [:edit, :update]
 
   devise_scope :spree_user do
+    get '/custom_registration', to: 'user_registrations#user_choose_clothes', as: :choose_own_clothes_registration
     get '/login', to: 'user_sessions#new', as: :login
     post '/login', to: 'user_sessions#create', as: :create_new_session
     match '/logout', to: 'user_sessions#destroy', as: :logout, via: Devise.sign_out_via
