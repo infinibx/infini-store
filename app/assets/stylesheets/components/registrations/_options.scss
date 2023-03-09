@@ -1,0 +1,40 @@
+.signup-options-wrapper {
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  margin: 0;
+}
+
+.signup-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+}
+
+.signup-option-1 {
+  // background-color: var(--brand-pink);
+  background: radial-gradient(circle at 10% 20%, var(--brand-pink) 0%, rgb(248, 129, 135) 98.3%);
+}
+
+.signup-option-2 {
+  // background-color: var(--brand-white);
+  background: radial-gradient(circle at 10% 20%, var(--brand-baby-pink) 0%, rgb(255, 218, 227) 98.3%);
+}
+
+.signup-option h3 {
+  font-family: var(--header-font);
+  font-size: 52px;
+  padding: 0 50px;
+  line-height: 1em;
+}
+
+.signup-option-1 h3 {
+  color: var(--brand-white);
+}
+
+.signup-option-2 h3 {
+  color: var(--brand-pink);
+}

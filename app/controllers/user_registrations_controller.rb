@@ -19,6 +19,16 @@ class UserRegistrationsController < Devise::RegistrationsController
     end
   end
 
+  def user_choose_clothes
+    build_resource({})
+    respond_with self.resource
+  end
+
+  def stylist_choose_clothes
+    build_resource({})
+    respond_with self.resource
+  end
+
   protected
 
   def translation_scope
@@ -32,6 +42,8 @@ class UserRegistrationsController < Devise::RegistrationsController
   private
 
   def spree_user_params
-    params.require(:spree_user).permit(Spree::PermittedAttributes.user_attributes | [:email])
+    params.require(:spree_user)
+    .permit(Spree::PermittedAttributes
+    .user_attributes | %i[email due_date color_palette height style])
   end
 end
