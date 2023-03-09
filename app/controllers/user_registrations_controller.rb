@@ -21,11 +21,11 @@ class UserRegistrationsController < Devise::RegistrationsController
 
   def user_choose_clothes
     build_resource({})
-    # respond_with self.resource
+    respond_with self.resource
   end
 
   def stylist_choose_clothes
-    build_resource(spree_user_params)
+    build_resource({})
     respond_with self.resource
   end
 

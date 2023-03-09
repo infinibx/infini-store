@@ -3,56 +3,35 @@
   <%= render 'shared/error_messages', target: resource %>
 
   <%= form_for resource, as: :spree_user, url: registration_path(resource), html: { class: "auth-form" } do |f| %>
-  <div class="email-password">
-    <h1>Schön dass du da bist!</h1>
-      <div class="auth-form__input-wrapper">
-        <div class="text-input">
-          <%= f.label :email, "#{t("spree.email")}:" %>
-          <%= f.email_field :email, placeholder: 'name@example.com' %>
+    <div class="email-password">
+      <h1>Schön dass du da bist!</h1>
+        <div class="auth-form__input-wrapper">
+          <div class="text-input">
+            <%= f.label :email, "#{t("spree.email")}:" %>
+            <%= f.email_field :email, placeholder: 'name@example.com' %>
+          </div>
         </div>
-      </div>
 
-      <div class="auth-form__input-wrapper">
-        <div class="text-input">
-          <%= f.label :password, "#{t("spree.password")}:" %>
-          <%= f.password_field :password, placeholder: "p455w0rd" %>
+        <div class="auth-form__input-wrapper">
+          <div class="text-input">
+            <%= f.label :password, "#{t("spree.password")}:" %>
+            <%= f.password_field :password, placeholder: "p455w0rd" %>
+          </div>
         </div>
-      </div>
 
-      <div class="auth-form__input-wrapper">
-        <div class="text-input">
-          <%= f.label :password_confirmation, "#{t("spree.confirm_password")}:" %>
-          <%= f.password_field :password_confirmation, placeholder: "p455w0rd" %>
+        <div class="auth-form__input-wrapper">
+          <div class="text-input">
+            <%= f.label :password_confirmation, "#{t("spree.confirm_password")}:" %>
+            <%= f.password_field :password_confirmation, placeholder: "p455w0rd" %>
+          </div>
         </div>
-      </div>
-  </div>
 
-    <div class="auth-form__input-wrapper">
-      <div class="text-input">
-        <%= f.label :due_date, "Due date:" %>
-        <%= f.date_field :due_date %>
-      </div>
-    </div>
-
-    <div class="auth-form__input-wrapper">
-      <div class="text-input">
-        <%= f.label :height, "Height(cm):" %>
-        <%= f.select :height, (100...200) %>
-      </div>
-    </div>
-
-    <div class="auth-form__input-wrapper">
-      <div class="text-input">
-        <%= f.label :color_palette, "Color Palette:" %>
-        <%= f.select :color_palette, [['Red, Blue, Yellow', 1], ['Mustard,Magenta', 2], ['Red, Pink, Purple', 3], ['Pastel: Pink, Blue, Lavender', 4], ['Brown, Green, Yellow, Blue, Sand', 5], ['Black, Gray, Navy, White', 6], ['Beige, Brown, Blue', 7]] %>
-      </div>
-    </div>
-
-    <div class="auth-form__input-wrapper">
-      <div class="text-input">
-        <%= f.label :style, "Style:" %>
-        <%= f.select :style, [['Casual', 1], ['Chic', 2], ['Classic', 3], ['Minimalist', 4], ['Business', 5], ['Athleisure', 6], ['Glam', 7]] %>
-      </div>
+        <div class="auth-form__input-wrapper">
+          <div class="text-input">
+            <%= f.label :due_date, "Due date:" %>
+            <%= f.date_field :due_date %>
+          </div>
+        </div>
     </div>
 
     <div class="auth-form__input-wrapper">
